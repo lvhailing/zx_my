@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_red_color">#ce2524</color>
+    <color name="main_red_color_Transparent">#bbd15237</color>
+    <color name="main_black_color">#2B2B2B</color>
+    <color name="white">#ffffff</color>
+    <color name="black_transparent">#99000000</color>
+    <color name="black_transparent_click">#222222</color>
+    <color name="gray_bg_color">#f3f3f3</color>
+    <color name="gray_bg_color_transparent">#bbd1d1d1</color>
+    <color name="zfb_gray_bg_color">#98a0af</color>
+
+
+    <color name="bg_light_gray">#efefef</color>
+    <color name="bg_line_gray">#aaaaaa</color>
+    <color name="bg_menu_line_gray">#44ffffff</color>
+    <color name="bg_gray">#F5F5F5</color>
+
+
+    <color name="title_color">#ffce2524</color>
+    <color name="txt_gray">#FF666666</color>
+    <color name="txt_gray_dark">#ff333333</color>
+    <color name="txt_gray_hint">#C9C8CE</color>
+</resources>

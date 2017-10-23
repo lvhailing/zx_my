@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:orientation="horizontal">
+
+        <!--
+         //邮箱本期暂时不要 340版 3/31号
+        <RelativeLayout
+            android:id="@+id/rl_email"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_item_selector">
+
+            <RelativeLayout
+                android:id="@+id/rl_1"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_email_normal3"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_1"
+                android:layout_centerHorizontal="true"
+                android:text="电子邮件"
+                android:textColor="@color/zfb_gray_bg_color"
+                android:textSize="10sp"/>
+        </RelativeLayout>-->
+
+
+        <RelativeLayout
+            android:id="@+id/rl_change"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_item_selector">
+
+            <RelativeLayout
+                android:id="@+id/rl_2"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_change_normal3"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_2"
+                android:layout_centerHorizontal="true"
+                android:text="修改密码"
+                android:textColor="@color/zfb_gray_bg_color"
+                android:textSize="10sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_zgs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_item_selector">
+
+            <RelativeLayout
+                android:id="@+id/rl_3"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_zgs_normal4"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_3"
+                android:layout_centerHorizontal="true"
+                android:text="子公司动态"
+                android:textColor="@color/zfb_gray_bg_color"
+                android:textSize="10sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_fgs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_item_selector">
+
+            <RelativeLayout
+                android:id="@+id/rl_4"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_fgs_normal2"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_4"
+                android:layout_centerHorizontal="true"
+                android:text="分公司动态"
+                android:textColor="@color/zfb_gray_bg_color"
+                android:textSize="10sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_zhan_wei"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_item_selector">
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_item_selector">
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

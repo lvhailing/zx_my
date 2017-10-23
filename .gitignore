@@ -1,0 +1,13 @@
+.gradle
+.idea
+/app/build
+
+/build
+import-summary.txt
+gradlew
+gradlew.bat
+local.properties
+*.iml
+
+*.jks
+*.apk

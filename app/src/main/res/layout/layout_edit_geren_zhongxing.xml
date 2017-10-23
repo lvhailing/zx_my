@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_edit_jiyao_jianbao"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="15dp"
+        android:text="个人中心"
+        android:textColor="@color/txt_gray_dark"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_daiban"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_3"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_daiban_normal3"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_daiban"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_daiban"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_3"
+                android:layout_centerHorizontal="true"
+                android:text="我的代办"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_yiban"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_4"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_yiban_normal1"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_yiban"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_yiban"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_4"
+                android:layout_centerHorizontal="true"
+                android:text="我的已办"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_daiyue"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_5"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_daiyue_normal4"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_daiyue"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_daiyue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_5"
+                android:layout_centerHorizontal="true"
+                android:text="我的待阅"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_yiyue"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_6"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_yiyue_normal1"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_yiyue"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_yiyue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_6"
+                android:layout_centerHorizontal="true"
+                android:text="我的已阅"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

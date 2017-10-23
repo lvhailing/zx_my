@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_edit_qiang"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="15dp"
+        android:text="强哥系列"
+        android:textColor="@color/txt_gray_dark"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_qiang_xinyu"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_1"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_qiang_normal3"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_qiang_xinyu"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_qiang_xinyu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_1"
+                android:layout_centerHorizontal="true"
+                android:text="强哥心语"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_qiang_coffee"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_2"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_coffe_normal4"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_qiang_coffee"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_qiang_coffee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/oneLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:text="coffee time"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_zhan_wei1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_item_selector">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_zhan_wei2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_item_selector">
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

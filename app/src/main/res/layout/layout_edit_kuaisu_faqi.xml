@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_edit_jiyao_jianbao"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="15dp"
+        android:text="快速发起"
+        android:textColor="@color/txt_gray_dark"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_qingjia_shenqing"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_1"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_qingjia_shenqing"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_qingjia_shenqing"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_qingjia_shenqing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_1"
+                android:layout_centerHorizontal="true"
+                android:text="请假申请"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_lingdao_qingjia"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_2"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_lingdao_qingjia"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_lingdao_qingjia"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_lingdao_qingjia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_2"
+                android:layout_centerHorizontal="true"
+                android:text="领导请假"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_yingong_chuchai"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_3"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_yingong_chuchai"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_yingong_chuchai"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_yingong_chuchai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_3"
+                android:layout_centerHorizontal="true"
+                android:text="因公出差"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_lingdao_chuchai"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/top_right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_4"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_lingdao_chuchai"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_lingdao_chuchai"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_lingdao_chuchai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_4"
+                android:layout_centerHorizontal="true"
+                android:text="领导出差"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_yingong_churujing"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_5"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_yingong_churujing"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_yingong_churujing"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_yingong_churujing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/oneLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_5"
+                android:layout_centerHorizontal="true"
+                android:text="因公出入镜"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_yinsi_churujing"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_6"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_yinsi_churujing"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_yinsi_churujing"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_yinsi_churujing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/oneLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_6"
+                android:layout_centerHorizontal="true"
+                android:text="因私出入镜"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_it_shenqing"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_7"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_it_shenqing"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_it_shenqing"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_it_shenqing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_7"
+                android:layout_centerHorizontal="true"
+                android:text="IT申请"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_shouquan_weituo"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/right_bottom_view">
+
+            <RelativeLayout
+                android:id="@+id/rl_8"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/home_weituo_shouquan"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_shouquan_weituo"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_add_shouquan_weituo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/home_jiahao"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_8"
+                android:layout_centerHorizontal="true"
+                android:text="授权委托"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

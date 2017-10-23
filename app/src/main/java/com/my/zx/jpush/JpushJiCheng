@@ -1,0 +1,17 @@
+
+jpush引入步骤：
+
+1、在开方平台注册应用，拿到appkey
+2、导入jar包（2个 jpush-..  jcore-..）
+3、导入.so
+4、gradle中设置对so的支持
+            sourceSets {
+                main {
+                    //jni库的调用会到资源文件夹下libs里面找so文件
+                    jniLibs.srcDirs = ['libs']
+                }
+            }
+5、在清单文件设置权限、元数据、service信息等
+6、application中初始化
+7、登陆后注册别名
+8、登录开放平台，发送验证
