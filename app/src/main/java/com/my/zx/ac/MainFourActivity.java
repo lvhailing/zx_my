@@ -93,6 +93,7 @@ public class MainFourActivity extends FragmentActivity {
 
         homeFourFragment = new HomeFourFragment();
         menuFragment = new MenuFragment();
+
         getSupportFragmentManager().beginTransaction().replace(R.id.fl_content, homeFourFragment).commit();
         getSupportFragmentManager().beginTransaction().replace(R.id.fl_menu, menuFragment).commit();
     }
