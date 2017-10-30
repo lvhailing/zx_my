@@ -19,8 +19,10 @@ import com.my.zx.ac.LoginActivity;
 import com.my.zx.ac.MainFourActivity;
 import com.my.zx.ac.MoreActivity;
 import com.my.zx.ac.MySettingActivity;
+import com.my.zx.utils.PreferenceUtil;
 import com.my.zx.utils.ToastUtil;
 import com.my.zx.utils.Util;
+import com.my.zx.widegt.CustomerDialog;
 
 /**
  * 侧滑菜单页
@@ -33,6 +35,7 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
     private RelativeLayout rl_more; // 更多功能
     private RelativeLayout rl_setting; // 设置
     private RelativeLayout rl_feedback; // 意见反馈
+    private RelativeLayout rl_logout; // 退出登录
     private Intent intent;
 
     @Override
@@ -55,12 +58,16 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
         rl_more = (RelativeLayout) mView.findViewById(R.id.rl_more);
         rl_setting = (RelativeLayout) mView.findViewById(R.id.rl_setting);
         rl_feedback = (RelativeLayout) mView.findViewById(R.id.rl_feedback);
+        rl_logout = (RelativeLayout) mView.findViewById(R.id.rl_logout);
 
         tv_login_or_name.setOnClickListener(this);
         iv_user_photo.setOnClickListener(this);
         rl_more.setOnClickListener(this);
         rl_setting.setOnClickListener(this);
         rl_feedback.setOnClickListener(this);
+        rl_logout.setOnClickListener(this);
+
+        refreshLogoutBtn(Util.checkLogin());
 
     }
 
@@ -122,9 +129,46 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
                 intent = new Intent(context, FeedbackActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.rl_logout: // 退出登录
+                showDialog();
+                break;
         }
         //关闭侧滑栏
         ((MainFourActivity) context).toggle();
+    }
+
+
+    private void showDialog() {
+        PreferenceUtil.showDiaDlg(context, -1, "确定要退出吗？", "", "确定", "取消", new CustomerDialog.ClickCallBack() {
+
+            @Override
+            public void onOk(CustomerDialog dlg) {
+                //情况用户信息
+                PreferenceUtil.putBoolean(context, "isLogin", false);
+                PreferenceUtil.putString(context, "userName", "");
+                PreferenceUtil.putString(context, "userId", "");
+                PreferenceUtil.putString(context, "my_cookie_string", "");
+                PreferenceUtil.putString(context, "my_cookie_domain_value", "");
+
+                //发送退出登录广播
+                Util.sendMyBroadcast(context, Constant.BROADCAST_LOGIN_OUT);
+
+//                finish();
+                dlg.dismissDlg();
+            }
+
+            @Override
+            public void onCancel(CustomerDialog dlg) {
+                dlg.dismissDlg();
+            }
+        }, 1);
+    }
+
+
+    //刷新退出登录按钮状态
+    public void refreshLogoutBtn(boolean isLogin) {
+        //未登录不显示
+        rl_logout.setVisibility(isLogin ? View.VISIBLE : View.GONE);
     }
 
 }

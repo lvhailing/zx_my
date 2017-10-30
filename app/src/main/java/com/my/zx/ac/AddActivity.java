@@ -109,7 +109,7 @@ public class AddActivity extends BaseActivity implements View.OnClickListener {
         iv_add_qingjia_shenqing.setBackgroundResource(!doDbHasMe(Constant.QINGJIA_SHENQING) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
         iv_add_lingdao_qingjia.setBackgroundResource(!doDbHasMe(Constant.LINGDAO_QINGJIA) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
         iv_add_yingong_chuchai.setBackgroundResource(!doDbHasMe(Constant.YINGONG_CHUCHAI) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
-        iv_add_lingdao_chuchai.setBackgroundResource(!doDbHasMe(Constant.LINGDAO_CHUCHAI) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
+        iv_add_lingdao_chuchai.setBackgroundResource(!doDbHasMe(Constant.ZICHAN_LINGDAO_CHUCHAI) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
         iv_add_yingong_churujing.setBackgroundResource(!doDbHasMe(Constant.YINGONG_CHURUJING) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
         iv_add_yinsi_churujing.setBackgroundResource(!doDbHasMe(Constant.YINSI_CHURUJING) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
         iv_add_it_shenqing.setBackgroundResource(!doDbHasMe(Constant.IT_SHENQING) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
@@ -180,7 +180,7 @@ public class AddActivity extends BaseActivity implements View.OnClickListener {
         rl_add_qingjia_shenqing = (RelativeLayout) findViewById(R.id.rl_add_qingjia_shenqing);
         rl_add_lingdao_qingjia = (RelativeLayout) findViewById(R.id.rl_add_lingdao_qingjia);
         rl_add_yingong_chuchai = (RelativeLayout) findViewById(R.id.rl_add_yingong_chuchai);
-        rl_add_lingdao_chuchai = (RelativeLayout) findViewById(R.id.rl_add_lingdao_chuchai);
+        rl_add_lingdao_chuchai = (RelativeLayout) findViewById(R.id.rl_add_zichan_lingdao_chuchai);
         rl_add_yingong_churujing = (RelativeLayout) findViewById(R.id.rl_add_yingong_churujing);
         rl_add_yinsi_churujing = (RelativeLayout) findViewById(R.id.rl_add_yinsi_churujing);
         rl_add_it_shenqing = (RelativeLayout) findViewById(R.id.rl_add_it_shenqing);
@@ -242,10 +242,10 @@ public class AddActivity extends BaseActivity implements View.OnClickListener {
                     delMe(Constant.QIANG);
                 }
                 break;
-            case R.id.rl_add_qiang_coffee:   //强哥Coffee Time
+            case R.id.rl_add_qiang_coffee:   //强哥coffee time
                 if (!doDbHasMe(Constant.COFFE)) {
                     iv_add_qiang_coffee.setBackgroundResource(R.drawable.home_jianhao);
-                    dbList.add(new HomeMo(Constant.COFFE, "强哥Coffee Time"));
+                    dbList.add(new HomeMo(Constant.COFFE, "强哥coffee time"));
                 } else {
                     iv_add_qiang_coffee.setBackgroundResource(R.drawable.home_jiahao);
                     delMe(Constant.COFFE);
@@ -350,13 +350,13 @@ public class AddActivity extends BaseActivity implements View.OnClickListener {
                     delMe(Constant.YINGONG_CHUCHAI);
                 }
                 break;
-            case R.id.rl_add_lingdao_chuchai:   //领导出差
-                if (!doDbHasMe(Constant.LINGDAO_CHUCHAI)) {
+            case R.id.rl_add_zichan_lingdao_chuchai:   //资产领导出差
+                if (!doDbHasMe(Constant.ZICHAN_LINGDAO_CHUCHAI)) {
                     iv_add_lingdao_chuchai.setBackgroundResource(R.drawable.home_jianhao);
-                    dbList.add(new HomeMo(Constant.LINGDAO_CHUCHAI, "领导出差"));
+                    dbList.add(new HomeMo(Constant.ZICHAN_LINGDAO_CHUCHAI, "资产领导出差"));
                 } else {
                     iv_add_lingdao_chuchai.setBackgroundResource(R.drawable.home_jiahao);
-                    delMe(Constant.LINGDAO_CHUCHAI);
+                    delMe(Constant.ZICHAN_LINGDAO_CHUCHAI);
                 }
                 break;
             case R.id.rl_add_yingong_churujing:   //因公出入境

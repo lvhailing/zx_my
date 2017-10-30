@@ -31,7 +31,7 @@ public class Constant {
     public static final int QINGJIA_SHENQING = 33000;        //请假申请
     public static final int LINGDAO_QINGJIA = 34000;        //领导请假
     public static final int YINGONG_CHUCHAI = 35000;        //因公出差
-    public static final int LINGDAO_CHUCHAI = 36000;        //领导出差
+    public static final int ZICHAN_LINGDAO_CHUCHAI = 36000;        //资产领导出差
     public static final int YINGONG_CHURUJING = 37000;        //因公出入境
     public static final int YINSI_CHURUJING = 38000;        //因私出入境
     public static final int IT_SHENQING = 39000;        //IT申请

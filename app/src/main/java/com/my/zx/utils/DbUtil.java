@@ -34,22 +34,23 @@ public class DbUtil {
 //        mList.add(new HomeMo(15000, "资产公司动态", false, 0, 0, "/produce/mobilemng.nsf/agtGetViewData?open&&odbpath=application/infopublish.nsf&oviewname=vwinfoforshow&page=1&rows=15&oviewcategory=zcgsdt&type=info"));
 //        mList.add(new HomeMo(20000, "分公司动态", false, 0, 0, "/produce/mobilemng.nsf/agtGetViewData?open&&odbpath=application/infopublish.nsf&oviewname=vwinfoforshow&page=1&rows=15&oviewcategory=fgsdt&type=info"));
         mList.add(new HomeMo(21000, "强哥心语"));
-        mList.add(new HomeMo(22000, "强哥Coffee Time"));
-        mList.add(new HomeMo(14000, "通知公告"));
-        mList.add(new HomeMo(12000, "待办任务"));
-        mList.add(new HomeMo(12100, "已办任务"));
-        mList.add(new HomeMo(13000, "未读消息"));
-        mList.add(new HomeMo(13100, "已读消息"));
+        mList.add(new HomeMo(22000, "强哥coffee time"));
+        mList.add(new HomeMo(28000, "党建工作"));
+        mList.add(new HomeMo(16000, "领导动态"));
+//        mList.add(new HomeMo(14000, "通知公告"));
+        mList.add(new HomeMo(12000, "我的待办"));
+        mList.add(new HomeMo(12100, "我的已办"));
+        mList.add(new HomeMo(13000, "我的待阅"));
+        mList.add(new HomeMo(13100, "我的已阅"));
+        mList.add(new HomeMo(40000, "授权委托"));
         mList.add(new HomeMo(33000, "请假申请"));
+        mList.add(new HomeMo(36000, "资产领导出差"));
         mList.add(new HomeMo(35000, "因公出差"));
-        mList.add(new HomeMo(36000, "领导出差"));
         mList.add(new HomeMo(37000, "因公出入境"));
         mList.add(new HomeMo(38000, "因私出入境"));
         mList.add(new HomeMo(39000, "IT申请"));
-        mList.add(new HomeMo(40000, "授权委托"));
-        mList.add(new HomeMo(16000, "公司领导动态"));
-        mList.add(new HomeMo(15000, "资产公司动态"));
-        mList.add(new HomeMo(20000, "分公司动态"));
+//        mList.add(new HomeMo(15000, "资产公司动态"));
+//        mList.add(new HomeMo(20000, "分公司动态"));
         return mList;
 
     }

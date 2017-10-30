@@ -141,12 +141,16 @@ public class MainFourActivity extends FragmentActivity {
                     homeFourFragment.initHomeData();
                     //刷新更多按钮状态
                     homeFourFragment.refreshMoreBtn();
+                    //刷新退出登录按钮状态
+                    menuFragment.refreshLogoutBtn(true);
                 } else if (intent.getAction().equals(Constant.BROADCAST_LOGIN_OUT)) {
                     //退出登陆广播
                     //需要去掉主页的小红点
                     homeFourFragment.refreshGridView_WhenLoginOut();
                     //刷新更多按钮状态
                     homeFourFragment.refreshMoreBtn();
+                    //刷新退出登录按钮状态
+                    menuFragment.refreshLogoutBtn(false);
                     //修改侧滑的名字为 "登录"
                     setMenuText("登录");
                 }
@@ -161,6 +165,10 @@ public class MainFourActivity extends FragmentActivity {
 
     public void setMenuText(String name) {
         menuFragment.setUserName(name);
+    }
+
+    public void refreshLogoutBtn(boolean isLogin) {
+        menuFragment.refreshLogoutBtn(isLogin);
     }
 
     //获取更多按钮文案，防止编辑未完成时，即去登录提示

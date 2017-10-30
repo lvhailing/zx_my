@@ -151,9 +151,9 @@ public class ImageLoadUtil {
                 rId = R.drawable.home_phone_normal4;
                 break;
             case Constant.QIANG: // 强哥心语
-                rId = R.drawable.home_qiang_normal3;
+                rId = R.drawable.home_qiang_normal4;
                 break;
-            case Constant.COFFE: // 强哥Coffee Time
+            case Constant.COFFE: // 强哥coffee time
                 rId = R.drawable.home_coffe_normal4;
                 break;
             case Constant.TUPIAN_NEWS: // 图片新闻
@@ -195,8 +195,8 @@ public class ImageLoadUtil {
             case Constant.YINGONG_CHUCHAI: // 因公出差
                 rId = R.drawable.home_yingong_chuchai;
                 break;
-            case Constant.LINGDAO_CHUCHAI: // 领导出差
-                rId = R.drawable.home_lingdao_chuchai;
+            case Constant.ZICHAN_LINGDAO_CHUCHAI: // 资产领导出差
+                rId = R.drawable.home_zichan_lingdao_chuchai;
                 break;
             case Constant.YINGONG_CHURUJING: // 因公出入境
                 rId = R.drawable.home_yingong_churujing;

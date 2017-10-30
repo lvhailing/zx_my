@@ -25,6 +25,11 @@
         <item name="android:ellipsize">end</item>
     </style>
 
+    <!--更多里分组的表头样式-->
+    <style name="bigText">
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <!--加减号 点击面积加大-->
     <style name="click_face_bigger">
         <item name="android:paddingTop">5dp</item>

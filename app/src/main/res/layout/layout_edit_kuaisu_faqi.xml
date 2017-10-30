@@ -8,6 +8,7 @@
     android:orientation="vertical">
 
     <TextView
+        style="@style/bigText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -162,7 +163,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/rl_lingdao_chuchai"
+            android:id="@+id/rl_zichan_lingdao_chuchai"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -178,10 +179,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:background="@drawable/home_lingdao_chuchai"/>
+                    android:background="@drawable/home_zichan_lingdao_chuchai"/>
 
                 <RelativeLayout
-                    android:id="@+id/rl_add_lingdao_chuchai"
+                    android:id="@+id/rl_add_zichan_lingdao_chuchai"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_alignParentRight="true">
@@ -198,11 +199,12 @@
             </RelativeLayout>
 
             <TextView
+                style="@style/oneLine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rl_4"
                 android:layout_centerHorizontal="true"
-                android:text="领导出差"
+                android:text="资产领导出差"
                 android:textColor="@color/txt_gray_dark"
                 android:textSize="12sp"/>
         </RelativeLayout>

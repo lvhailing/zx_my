@@ -182,7 +182,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:background="@drawable/home_qiang_normal3"/>
+                    android:background="@drawable/home_qiang_normal4"/>
             </RelativeLayout>
 
             <TextView
@@ -220,7 +220,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rl_6"
                 android:layout_centerHorizontal="true"
-                android:text="强哥Coffee Time"
+                android:text="强哥coffee time"
                 android:textColor="@color/zfb_gray_bg_color"
                 android:textSize="10sp"/>
         </RelativeLayout>

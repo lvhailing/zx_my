@@ -6,13 +6,11 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.my.zx.Constant;
 import com.my.zx.R;
 import com.my.zx.model.VersionMo;
 import com.my.zx.net.DataService;
@@ -22,8 +20,6 @@ import com.my.zx.utils.DeviceUtil;
 import com.my.zx.utils.PreferenceUtil;
 import com.my.zx.utils.ToastUtil;
 import com.my.zx.utils.UpdateUtil;
-import com.my.zx.utils.Util;
-import com.my.zx.widegt.CustomerDialog;
 
 import java.util.Map;
 
@@ -34,14 +30,15 @@ import java.util.Map;
 public class MySettingActivity extends BaseActivity implements View.OnClickListener {
     private ImageButton ib_setting_push; // 推送开关
     //    private ImageButton ib_setting_remember_pwd; // 记录密码
-//    private RelativeLayout rl_setting_remember_pwd; // 记录密码
+    //    private RelativeLayout rl_setting_remember_pwd; // 记录密码
     private RelativeLayout rl_setting_ip; // IP地址/端口/域名
     private RelativeLayout rl_setting_change_password; // 修改登录密码
     private RelativeLayout rl_setting_check_update; // 检查更新
-    private Button btn_setting_logout;  // 退出登录
+    //    private Button btn_setting_logout;  // 退出登录
     private TextView tv_setting_version_code; //  版本号
     private ImageView iv_back;
     private Intent intent;
+
     private Handler handler = new Handler() {
 
         @Override
@@ -88,7 +85,7 @@ public class MySettingActivity extends BaseActivity implements View.OnClickListe
         rl_setting_change_password = (RelativeLayout) findViewById(R.id.rl_setting_change_password);
         rl_setting_check_update = (RelativeLayout) findViewById(R.id.rl_setting_check_update);
         tv_setting_version_code = (TextView) findViewById(R.id.tv_setting_version_code);
-        btn_setting_logout = (Button) findViewById(R.id.btn_setting_logout);
+//        btn_setting_logout = (Button) findViewById(R.id.btn_setting_logout);
 
         iv_back.setOnClickListener(this);
         ib_setting_push.setOnClickListener(this);
@@ -96,7 +93,7 @@ public class MySettingActivity extends BaseActivity implements View.OnClickListe
         rl_setting_ip.setOnClickListener(this);
         rl_setting_change_password.setOnClickListener(this);
         rl_setting_check_update.setOnClickListener(this);
-        btn_setting_logout.setOnClickListener(this);
+//        btn_setting_logout.setOnClickListener(this);
 
         //4.0需求 暂时不要
         rl_setting_ip.setVisibility(View.GONE);
@@ -165,9 +162,9 @@ public class MySettingActivity extends BaseActivity implements View.OnClickListe
             case R.id.rl_setting_check_update: //  检查更新
                 checkUpdate();
                 break;
-            case R.id.btn_setting_logout: // 退出登录
+            /*case R.id.btn_setting_logout: // 退出登录
                 showDialog();
-                break;
+                break;*/
         }
     }
 
@@ -179,28 +176,28 @@ public class MySettingActivity extends BaseActivity implements View.OnClickListe
         DataService.checkVersion(handler, vname, vcode);
     }
 
-    private void showDialog() {
-        PreferenceUtil.showDiaDlg(this, -1, "确定要退出吗？", "", "确定", "取消", new CustomerDialog.ClickCallBack() {
-
-            @Override
-            public void onOk(CustomerDialog dlg) {
-                //情况用户信息
-                PreferenceUtil.putBoolean(MySettingActivity.this, "isLogin", false);
-                PreferenceUtil.putString(MySettingActivity.this, "userName", "");
-                PreferenceUtil.putString(MySettingActivity.this, "userId", "");
-                PreferenceUtil.putString(MySettingActivity.this, "my_cookie_string", "");
-                PreferenceUtil.putString(MySettingActivity.this, "my_cookie_domain_value", "");
-
-                //发送退出登录广播
-                Util.sendMyBroadcast(MySettingActivity.this, Constant.BROADCAST_LOGIN_OUT);
-
-                finish();
-            }
-
-            @Override
-            public void onCancel(CustomerDialog dlg) {
-                dlg.dismissDlg();
-            }
-        }, 1);
-    }
+//    private void showDialog() {
+//        PreferenceUtil.showDiaDlg(this, -1, "确定要退出吗？", "", "确定", "取消", new CustomerDialog.ClickCallBack() {
+//
+//            @Override
+//            public void onOk(CustomerDialog dlg) {
+//                //情况用户信息
+//                PreferenceUtil.putBoolean(MySettingActivity.this, "isLogin", false);
+//                PreferenceUtil.putString(MySettingActivity.this, "userName", "");
+//                PreferenceUtil.putString(MySettingActivity.this, "userId", "");
+//                PreferenceUtil.putString(MySettingActivity.this, "my_cookie_string", "");
+//                PreferenceUtil.putString(MySettingActivity.this, "my_cookie_domain_value", "");
+//
+//                //发送退出登录广播
+//                Util.sendMyBroadcast(MySettingActivity.this, Constant.BROADCAST_LOGIN_OUT);
+//
+//                finish();
+//            }
+//
+//            @Override
+//            public void onCancel(CustomerDialog dlg) {
+//                dlg.dismissDlg();
+//            }
+//        }, 1);
+//    }
 }

@@ -82,7 +82,7 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener {
         RelativeLayout rl_qingjia_shenqing = (RelativeLayout) findViewById(R.id.rl_qingjia_shenqing);
         RelativeLayout rl_lingdao_qingjia = (RelativeLayout) findViewById(R.id.rl_lingdao_qingjia);
         RelativeLayout rl_yingong_chuchai = (RelativeLayout) findViewById(R.id.rl_yingong_chuchai);
-        RelativeLayout rl_lingdao_chuchai = (RelativeLayout) findViewById(R.id.rl_lingdao_chuchai);
+        RelativeLayout rl_lingdao_chuchai = (RelativeLayout) findViewById(R.id.rl_zichan_lingdao_chuchai);
         RelativeLayout rl_yingong_churujing = (RelativeLayout) findViewById(R.id.rl_yingong_churujing);
         RelativeLayout rl_yinsi_churujing = (RelativeLayout) findViewById(R.id.rl_yinsi_churujing);
         RelativeLayout rl_it_shenqing = (RelativeLayout) findViewById(R.id.rl_it_shenqing);
@@ -111,7 +111,7 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener {
         RelativeLayout rl_add_qingjia_shenqing = (RelativeLayout) findViewById(R.id.rl_add_qingjia_shenqing);
         RelativeLayout rl_add_lingdao_qingjia = (RelativeLayout) findViewById(R.id.rl_add_lingdao_qingjia);
         RelativeLayout rl_add_yingong_chuchai = (RelativeLayout) findViewById(R.id.rl_add_yingong_chuchai);
-        RelativeLayout rl_add_lingdao_chuchai = (RelativeLayout) findViewById(R.id.rl_add_lingdao_chuchai);
+        RelativeLayout rl_add_lingdao_chuchai = (RelativeLayout) findViewById(R.id.rl_add_zichan_lingdao_chuchai);
         RelativeLayout rl_add_yingong_churujing = (RelativeLayout) findViewById(R.id.rl_add_yingong_churujing);
         RelativeLayout rl_add_yinsi_churujing = (RelativeLayout) findViewById(R.id.rl_add_yinsi_churujing);
         RelativeLayout rl_add_it_shenqing = (RelativeLayout) findViewById(R.id.rl_add_it_shenqing);
@@ -197,7 +197,7 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener {
             case R.id.rl_qiang_xinyu:   //强哥心语
                 goToActivity(Constant.QIANG);
                 break;
-            case R.id.rl_qiang_coffee:   //强哥Coffee Time
+            case R.id.rl_qiang_coffee:   //强哥coffee time
                 goToActivity(Constant.COFFE);
                 break;
             case R.id.rl_dangwei_jiyao:   //党委会纪要
@@ -233,8 +233,8 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener {
             case R.id.rl_yingong_chuchai:   //因公出差
                 goToActivity(Constant.YINGONG_CHUCHAI);
                 break;
-            case R.id.rl_lingdao_chuchai:   //领导出差
-                goToActivity(Constant.LINGDAO_CHUCHAI);
+            case R.id.rl_zichan_lingdao_chuchai:   //资产领导出差
+                goToActivity(Constant.ZICHAN_LINGDAO_CHUCHAI);
                 break;
             case R.id.rl_yingong_churujing:   //因公出入境
                 goToActivity(Constant.YINGONG_CHURUJING);

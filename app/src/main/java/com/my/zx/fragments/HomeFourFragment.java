@@ -99,6 +99,8 @@ public class HomeFourFragment extends BaseFragment implements RecycleCallBack, V
                         PreferenceUtil.putString(context, "userId", userId);
                         //刷新更多文案
                         refreshMoreBtn();
+                        //刷新退出登陆按钮状态
+                        refreshLogoutBtn();
 
                         jsonList = (List<HomeMo>) resultMap.get("list");
                         if (jsonList != null && jsonList.size() > 0) {
@@ -219,6 +221,18 @@ public class HomeFourFragment extends BaseFragment implements RecycleCallBack, V
         }
     }
 
+    //刷新退出登录按钮状态
+    public void refreshLogoutBtn() {
+        //未登录 、请求不到userName、userName为Anonymous；都隐藏退出登录按钮
+        if (!Util.checkLogin() || TextUtils.isEmpty(PreferenceUtil.getString(context, "userName")) || PreferenceUtil.getString(context, "userName").equals("Anonymous")) {
+            //未登录
+            ((MainFourActivity) context).refreshLogoutBtn(false);
+        } else {
+            //已登录
+            ((MainFourActivity) context).refreshLogoutBtn(true);
+        }
+    }
+
     //获取更多按钮文案，防止编辑未完成时，即去登录提示
     public String getMoreBtnText() {
         return tv_more.getText().toString();
@@ -237,7 +251,7 @@ public class HomeFourFragment extends BaseFragment implements RecycleCallBack, V
             for (HomeMo jsonItem : jsonList) {
                 if (dbId == jsonItem.getId()) {
                     //是同一个对象
-                    dbItem.setItemName(jsonItem.getItemName());
+//                    dbItem.setItemName(jsonItem.getItemName());
                     dbItem.setHasNum(jsonItem.isHasNum());
                     dbItem.setHref(jsonItem.getHref());
                     dbItem.setTaskNum(jsonItem.getTaskNum());
@@ -274,21 +288,20 @@ public class HomeFourFragment extends BaseFragment implements RecycleCallBack, V
             startActivityForResult(intent, 100);
             return;
         }
-        //点其他项去访问具体界面，需要登录
+        //点击删除按钮
+        if (view.getId() == R.id.iv_del_item) {
+            dbList.remove(position);
+            mAdapter.notifyItemRemoved(position);
+            return;
+        }
+        //点击该项，如果未登录
         if (!Util.checkLogin()) {
             //去登录
             Util.goToLogin(context);
             return;
         }
-        //点击某项
-        if (view.getId() == R.id.iv_del_item) {
-            //点击删除按钮
-            dbList.remove(position);
-            mAdapter.notifyItemRemoved(position);
-        } else {
-            //点击去二级页面
-            goToActivity(dbList.get(position));
-        }
+        //已登录，去二级页面
+        goToActivity(dbList.get(position));
     }
 
     private void goToActivity(HomeMo item) {
