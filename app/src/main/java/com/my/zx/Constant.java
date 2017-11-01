@@ -9,12 +9,12 @@ public class Constant {
     public static final int DAIYUE = 13000;        //待阅
     public static final int YIYUE = 13100;        //已阅
     public static final int INFO = 14000;            //通知公告
-    public static final int ZICHAN = 15000;        //资产动态
+    public static final int ZICHAN_GONGSI_DONGTAI = 15000;        //资产动态
     public static final int BOSS = 16000;            //领导动态
     public static final int CHANGE = 17000;        //修改密码
-    public static final int ZGS = 18000;            //子公司动态(原工资查询)
+    public static final int ZIGOGNSI_DONGTAI = 18000;            //子公司动态(原工资查询)
     public static final int EMAIL = 19000;        //邮件
-    public static final int FGS = 20000;            //分公司动态
+    public static final int FENGOGNSI_DONGTAI = 20000;            //分公司动态
     public static final int QIANG = 21000;        //强哥心语
     public static final int COFFE = 22000;        //Coffe Time
     public static final int ZHINENG = 23000;        //职能部门动态

@@ -128,7 +128,7 @@ public class ImageLoadUtil {
             case Constant.INFO: // 通知公告
                 rId = R.drawable.home_tongzhi_gonggao;
                 break;
-            case Constant.ZICHAN: // 公司资产动态
+            case Constant.ZICHAN_GONGSI_DONGTAI: // 公司资产动态
                 rId = R.drawable.home_zichan_nomal3;
                 break;
             case Constant.BOSS: // 领导动态
@@ -137,13 +137,13 @@ public class ImageLoadUtil {
             case Constant.CHANGE:        //修改密码
                 rId = R.drawable.home_change_normal3;
                 break;
-            case Constant.ZGS: // 子公司动态
+            case Constant.ZIGOGNSI_DONGTAI: // 子公司动态
                 rId = R.drawable.home_zgs_normal5;
                 break;
             case Constant.EMAIL: // 邮件
                 rId = R.drawable.home_email_normal3;
                 break;
-            case Constant.FGS: // 分公司动态
+            case Constant.FENGOGNSI_DONGTAI: // 分公司动态
                 rId = R.drawable.home_fgs_normal3;
                 break;
             case Constant.ZHINENG: // 职能部门动态

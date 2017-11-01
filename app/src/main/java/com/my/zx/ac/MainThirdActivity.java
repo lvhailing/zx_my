@@ -345,7 +345,7 @@ public class MainThirdActivity extends BaseActivity implements View.OnClickListe
                 startListActivity(Constant.COFFE);
                 break;
             case R.id.rl_zichan:
-                startListActivity(Constant.ZICHAN);
+                startListActivity(Constant.ZICHAN_GONGSI_DONGTAI);
                 break;
             case R.id.rl_boss:
                 //将文本和点击事件都换成 "通知公告" 6/15
@@ -353,17 +353,17 @@ public class MainThirdActivity extends BaseActivity implements View.OnClickListe
 //                startListActivity(Constant.BOSS);
                 break;
             case R.id.rl_fgs:
-                startListActivity(Constant.FGS);
+                startListActivity(Constant.FENGOGNSI_DONGTAI);
                 break;
             case R.id.rl_zgs:
-                startListActivity(Constant.ZGS);
+                startListActivity(Constant.ZIGOGNSI_DONGTAI);
                 break;
 
             case R.id.tv_cancel:
                 showDailog();
                 break;
             case R.id.tv_more:
-                startListActivity(Constant.ZICHAN);
+                startListActivity(Constant.ZICHAN_GONGSI_DONGTAI);
                 break;
             case R.id.rl_1:
                 startWebViewActivity2(0);
@@ -462,7 +462,7 @@ public class MainThirdActivity extends BaseActivity implements View.OnClickListe
                 case Constant.DAIYUE: // 待阅
                     if (item.isHasNum()) setTaskNum(tv_dai_yue, item.getTaskNum());
                     break;
-                case Constant.ZICHAN: // 资产动态  为底部listview 设置数据
+                case Constant.ZICHAN_GONGSI_DONGTAI: // 资产动态  为底部listview 设置数据
                     initBossList(item.getHref());
                     break;
                 default:

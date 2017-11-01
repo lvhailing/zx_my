@@ -84,7 +84,7 @@ public class AddActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_all);
+        setContentView(R.layout.activity_add);
 
         initView();
         initDatas();
@@ -118,9 +118,9 @@ public class AddActivity extends BaseActivity implements View.OnClickListener {
         iv_add_jijian_jiancha.setBackgroundResource(!doDbHasMe(Constant.JIJIAN_JIANCHA) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
         iv_add_gonghui_tuanwei.setBackgroundResource(!doDbHasMe(Constant.GONGHUI_TUANWEI) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
         iv_add_tuanwei_dongtai.setBackgroundResource(!doDbHasMe(Constant.TUANWEI_DONGTAI) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
-        iv_add_zichan_dongtai.setBackgroundResource(!doDbHasMe(Constant.ZICHAN) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
-        iv_add_fengongsi_dongtai.setBackgroundResource(!doDbHasMe(Constant.FGS) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
-        iv_add_zigongsi_dongtai.setBackgroundResource(!doDbHasMe(Constant.ZGS) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
+        iv_add_zichan_dongtai.setBackgroundResource(!doDbHasMe(Constant.ZICHAN_GONGSI_DONGTAI) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
+        iv_add_fengongsi_dongtai.setBackgroundResource(!doDbHasMe(Constant.FENGOGNSI_DONGTAI) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
+        iv_add_zigongsi_dongtai.setBackgroundResource(!doDbHasMe(Constant.ZIGOGNSI_DONGTAI) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
         iv_add_renshi_xinxi.setBackgroundResource(!doDbHasMe(Constant.RENSHI_XINXI) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
         iv_add_tongzhi_gonggao.setBackgroundResource(!doDbHasMe(Constant.INFO) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
         iv_add_lingdao_dongtai.setBackgroundResource(!doDbHasMe(Constant.BOSS) ? R.drawable.home_jiahao : R.drawable.home_jianhao);
@@ -432,30 +432,30 @@ public class AddActivity extends BaseActivity implements View.OnClickListener {
                 }
                 break;
             case R.id.rl_add_zichan_dongtai:   // 资产公司动态
-                if (!doDbHasMe(Constant.ZICHAN)) {
+                if (!doDbHasMe(Constant.ZICHAN_GONGSI_DONGTAI)) {
                     iv_add_zichan_dongtai.setBackgroundResource(R.drawable.home_jianhao);
-                    dbList.add(new HomeMo(Constant.ZICHAN, "资产公司动态"));
+                    dbList.add(new HomeMo(Constant.ZICHAN_GONGSI_DONGTAI, "资产公司动态"));
                 } else {
                     iv_add_zichan_dongtai.setBackgroundResource(R.drawable.home_jiahao);
-                    delMe(Constant.ZICHAN);
+                    delMe(Constant.ZICHAN_GONGSI_DONGTAI);
                 }
                 break;
             case R.id.rl_add_fengongsi_dongtai:   // 分公司动态
-                if (!doDbHasMe(Constant.FGS)) {
+                if (!doDbHasMe(Constant.FENGOGNSI_DONGTAI)) {
                     iv_add_fengongsi_dongtai.setBackgroundResource(R.drawable.home_jianhao);
-                    dbList.add(new HomeMo(Constant.FGS, "分公司动态"));
+                    dbList.add(new HomeMo(Constant.FENGOGNSI_DONGTAI, "分公司动态"));
                 } else {
                     iv_add_fengongsi_dongtai.setBackgroundResource(R.drawable.home_jiahao);
-                    delMe(Constant.FGS);
+                    delMe(Constant.FENGOGNSI_DONGTAI);
                 }
                 break;
             case R.id.rl_add_zigongsi_dongtai:   // 子公司动态
-                if (!doDbHasMe(Constant.ZGS)) {
+                if (!doDbHasMe(Constant.ZIGOGNSI_DONGTAI)) {
                     iv_add_zigongsi_dongtai.setBackgroundResource(R.drawable.home_jianhao);
-                    dbList.add(new HomeMo(Constant.ZGS, "子公司动态"));
+                    dbList.add(new HomeMo(Constant.ZIGOGNSI_DONGTAI, "子公司动态"));
                 } else {
                     iv_add_zigongsi_dongtai.setBackgroundResource(R.drawable.home_jiahao);
-                    delMe(Constant.ZGS);
+                    delMe(Constant.ZIGOGNSI_DONGTAI);
                 }
                 break;
             case R.id.rl_add_renshi_xinxi:   // 人事信息

@@ -168,16 +168,16 @@ public class HomeFragment extends Fragment implements OnClickListener {
                 startListActivity(Constant.COFFE);
                 break;
             case R.id.rl_zichan:
-                startListActivity(Constant.ZICHAN);
+                startListActivity(Constant.ZICHAN_GONGSI_DONGTAI);
                 break;
             case R.id.rl_boss:
                 startListActivity(Constant.BOSS);
                 break;
             case R.id.rl_fgs:
-                startListActivity(Constant.FGS);
+                startListActivity(Constant.FENGOGNSI_DONGTAI);
                 break;
             case R.id.rl_zgs:
-                startListActivity(Constant.ZGS);
+                startListActivity(Constant.ZIGOGNSI_DONGTAI);
                 break;
 
             case R.id.tv_cancel:
@@ -264,16 +264,16 @@ public class HomeFragment extends Fragment implements OnClickListener {
                 case Constant.COFFE: // 咖啡时间
                     if (item.isHasNum()) setTaskNum(tv_coffe, item.getTaskNum());
                     break;
-                case Constant.ZICHAN: // 资产动态
+                case Constant.ZICHAN_GONGSI_DONGTAI: // 资产动态
                     if (item.isHasNum()) setTaskNum(tv_zichan, item.getTaskNum());
                     break;
                 case Constant.BOSS: // 领导动态
                     if (item.isHasNum()) setTaskNum(tv_boss, item.getTaskNum());
                     break;
-                case Constant.ZGS: // 子公司动态
+                case Constant.ZIGOGNSI_DONGTAI: // 子公司动态
                     if (item.isHasNum()) setTaskNum(tv_zgs, item.getTaskNum());
                     break;
-                case Constant.FGS: // 分公司动态
+                case Constant.FENGOGNSI_DONGTAI: // 分公司动态
                     if (item.isHasNum()) setTaskNum(tv_fgs, item.getTaskNum());
                     break;
                 default:

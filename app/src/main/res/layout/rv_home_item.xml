@@ -51,4 +51,5 @@
         android:layout_marginTop="4dp"
         android:background="@drawable/del_item"
         android:visibility="gone"/>
+
 </RelativeLayout>

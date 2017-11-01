@@ -40,7 +40,7 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.MyRecycl
 
     @Override
     public MyRecycleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_home_item, parent, false);
         return new MyRecycleViewHolder(view, mRecycleClick);
     }
 

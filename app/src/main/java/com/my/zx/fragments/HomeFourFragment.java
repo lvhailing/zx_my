@@ -20,9 +20,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.my.zx.Constant;
 import com.my.zx.R;
-import com.my.zx.ac.AddActivity;
+import com.my.zx.ac.AddFourActivity;
 import com.my.zx.ac.MainFourActivity;
 import com.my.zx.ac.MoreActivity;
 import com.my.zx.ac.SecondLevelActivity;
@@ -42,7 +43,6 @@ import com.my.zx.utils.PreferenceUtil;
 import com.my.zx.utils.ToastUtil;
 import com.my.zx.utils.Util;
 import com.my.zx.utils.fresco.ImageLoader;
-import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.io.Serializable;
 import java.util.Collections;
@@ -283,7 +283,7 @@ public class HomeFourFragment extends BaseFragment implements RecycleCallBack, V
     public void itemOnClick(int position, View view) {
         if (position == dbList.size()) {
             //点击最后添加按钮，可以去添加更多
-            Intent intent = new Intent(context, AddActivity.class);
+            Intent intent = new Intent(context, AddFourActivity.class);
             intent.putExtra("dbList", (Serializable) dbList);
             startActivityForResult(intent, 100);
             return;

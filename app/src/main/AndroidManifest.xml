@@ -95,6 +95,11 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar"/>
         <activity
+            android:name=".ac.AddFourActivity"
+            android:label="@string/title_activity_new_main"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity
             android:name=".ac.AddActivity"
             android:label="@string/title_activity_new_main"
             android:screenOrientation="portrait"

@@ -1,5 +1,6 @@
 package com.my.zx.utils;
 
+import com.my.zx.Constant;
 import com.my.zx.model.HomeMo;
 
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ import java.util.List;
 
 public class DbUtil {
 
+    //第一次安装 默认的首页九宫格的项
     public static List<HomeMo> initializeHomes() {
         List<HomeMo> mList = new ArrayList<>();
 
@@ -53,6 +55,46 @@ public class DbUtil {
 //        mList.add(new HomeMo(20000, "分公司动态"));
         return mList;
 
+    }
+
+    //默认的添加界面的项
+    public static List<HomeMo> initializeAddActivityItems() {
+        List<HomeMo> mList = new ArrayList<>();
+
+        mList.add(new HomeMo(21000, "强哥心语"));
+        mList.add(new HomeMo(22000, "强哥coffee time"));
+
+        mList.add(new HomeMo(Constant.DANGWEI_JIYAO, "党委会纪要"));
+        mList.add(new HomeMo(Constant.BANGONG_JIYAO, "办公会纪要"));
+        mList.add(new HomeMo(Constant.ZHUANTI_JIYAO, "专题会纪要"));
+        mList.add(new HomeMo(Constant.GONGZUO_JIANBAO, "工作简报"));
+
+        mList.add(new HomeMo(12000, "我的待办"));
+        mList.add(new HomeMo(12100, "我的已办"));
+        mList.add(new HomeMo(13000, "我的待阅"));
+        mList.add(new HomeMo(13100, "我的已阅"));
+
+        mList.add(new HomeMo(33000, "请假申请"));
+        mList.add(new HomeMo(Constant.GONGZUO_JIANBAO, "领导请假"));
+        mList.add(new HomeMo(35000, "因公出差"));
+        mList.add(new HomeMo(36000, "资产领导出差"));
+        mList.add(new HomeMo(37000, "因公出入境"));
+        mList.add(new HomeMo(38000, "因私出入境"));
+        mList.add(new HomeMo(39000, "IT申请"));
+        mList.add(new HomeMo(40000, "授权委托"));
+
+        mList.add(new HomeMo(28000, "党建工作"));
+        mList.add(new HomeMo(Constant.JIJIAN_JIANCHA, "纪检监察"));
+        mList.add(new HomeMo(Constant.GONGHUI_TUANWEI, "工会团委"));
+        mList.add(new HomeMo(Constant.TUANWEI_DONGTAI, "团委动态"));
+        mList.add(new HomeMo(Constant.ZICHAN_GONGSI_DONGTAI, "资产公司动态"));
+        mList.add(new HomeMo(Constant.FENGOGNSI_DONGTAI, "分公司动态"));
+        mList.add(new HomeMo(Constant.ZIGOGNSI_DONGTAI, "子公司动态"));
+        mList.add(new HomeMo(Constant.RENSHI_XINXI, "人事信息"));
+        mList.add(new HomeMo(14000, "通知公告"));
+        mList.add(new HomeMo(16000, "领导动态"));
+
+        return mList;
     }
 
 }

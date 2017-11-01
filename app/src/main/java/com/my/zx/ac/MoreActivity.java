@@ -54,7 +54,7 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_all);
+        setContentView(R.layout.activity_add);
 
         initView();
         initHomeList();
@@ -261,13 +261,13 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener {
                 goToActivity(Constant.TUANWEI_DONGTAI);
                 break;
             case R.id.rl_zichan_dongtai:   // 资产公司动态
-                goToActivity(Constant.ZICHAN);
+                goToActivity(Constant.ZICHAN_GONGSI_DONGTAI);
                 break;
             case R.id.rl_fengongsi_dongtai:   // 分公司动态
-                goToActivity(Constant.FGS);
+                goToActivity(Constant.FENGOGNSI_DONGTAI);
                 break;
             case R.id.rl_zigongsi_dongtai:   // 子公司动态
-                goToActivity(Constant.ZGS);
+                goToActivity(Constant.ZIGOGNSI_DONGTAI);
                 break;
             case R.id.rl_renshi_xinxi:   // 人事信息
                 goToActivity(Constant.RENSHI_XINXI);
