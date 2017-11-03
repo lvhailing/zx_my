@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">中信资产</string>
+    <string name="app_name_debug">中信资产内测版</string>
     <string name="menu_settings">Settings</string>
     <string name="hello_world">Hello worldaa!</string>
     <string name="alert_current_progress">%1$.2f / %2$.2fKB （%3$d%%）</string>

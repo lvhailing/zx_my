@@ -18,6 +18,11 @@ public class UpdateUtil {
     private Context context;
 
     public void checkVersion(Context context, VersionMo version) {
+        //如果activity已经不在，返回
+        if (((Activity) context).isFinishing()) {
+            return;
+        }
+
         if (version.getUpgradeContent() == null || version.getUpgradeUrl() == null) {
             return;
         }

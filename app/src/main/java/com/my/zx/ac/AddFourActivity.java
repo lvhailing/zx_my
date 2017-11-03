@@ -65,7 +65,9 @@ public class AddFourActivity extends BaseActivity implements View.OnClickListene
                 break;
             case R.id.tv_done:   //完成
                 DBManager.saveHomes(this, dbList);
-                ToastUtil.showToastPersonality(AddFourActivity.this, "保存完成");
+                ToastUtil.showToast("保存完成");
+                finish();
+//                ToastUtil.showToastPersonality(AddFourActivity.this, "保存完成");
 //                showWaitProgress();
 //                new Handler().postDelayed(new Runnable() {
 //                    @Override

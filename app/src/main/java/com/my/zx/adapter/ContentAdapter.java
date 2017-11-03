@@ -137,6 +137,10 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.MyRecycl
 
         @Override
         public void onClick(View v) {
+            if (isEditMode && v.getId() != R.id.iv_del_item) {
+                //编辑模式下，只能点删除，不能点击某项
+                return;
+            }
             //点击某项的回调
             if (null != callBack) {
                 callBack.itemOnClick(getAdapterPosition(), v);

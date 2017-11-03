@@ -114,7 +114,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="7dp"
                 android:layout_marginRight="7dp"
-                android:text="coffee time"
+                android:text="强哥 coffee time"
                 android:textColor="@color/txt_gray_dark"
                 android:textSize="12sp"/>
         </RelativeLayout>
