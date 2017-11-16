@@ -153,7 +153,7 @@ public class ImageLoadUtil {
             case Constant.QIANG: // 强哥心语
                 rId = R.drawable.home_qiang_normal4;
                 break;
-            case Constant.COFFE: // 强哥coffee time
+            case Constant.COFFE: // 强哥 coffee time
                 rId = R.drawable.home_coffe_normal4;
                 break;
             case Constant.TUPIAN_NEWS: // 图片新闻

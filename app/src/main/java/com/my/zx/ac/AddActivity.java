@@ -242,10 +242,10 @@ public class AddActivity extends BaseActivity implements View.OnClickListener {
                     delMe(Constant.QIANG);
                 }
                 break;
-            case R.id.rl_add_qiang_coffee:   //强哥coffee time
+            case R.id.rl_add_qiang_coffee:   //强哥 coffee time
                 if (!doDbHasMe(Constant.COFFE)) {
                     iv_add_qiang_coffee.setBackgroundResource(R.drawable.home_jianhao);
-                    dbList.add(new HomeMo(Constant.COFFE, "强哥coffee time"));
+                    dbList.add(new HomeMo(Constant.COFFE, "强哥 coffee time"));
                 } else {
                     iv_add_qiang_coffee.setBackgroundResource(R.drawable.home_jiahao);
                     delMe(Constant.COFFE);

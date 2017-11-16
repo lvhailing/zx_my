@@ -294,9 +294,9 @@ public class HomeFourFragment extends BaseFragment implements RecycleCallBack, V
             mAdapter.notifyItemRemoved(position);
             return;
         }
-        //点击该项，如果未登录
-        if (!Util.checkLogin()) {
-            //去登录
+        //点击该项，如果未登录、请求不到userName、userName为Anonymous；都提示登录
+        if (!Util.checkLogin() || TextUtils.isEmpty(PreferenceUtil.getString(context, "userName")) || PreferenceUtil.getString(context, "userName").equals("Anonymous")) {
+            //未登录，去登录
             Util.goToLogin(context);
             return;
         }

@@ -18,7 +18,10 @@ public class JsonRequest {
 //    public static String baseUrl = "http://oa.amc.intra.citic.com/";
 
     //2017年3月30日添加，需求是改成了外网访问
-    public static String baseUrl = "http://47.93.47.17/";
+//    public static String baseUrl = "http://47.93.47.17/";
+
+    //2017年11月9日添加，需求改动，目的是和iOS一致
+    public static String baseUrl = "http://oa.amc.citic/";
 
     private String loginPath = "names.nsf?login";
     private String homeListPath = "produce/mobileMng.nsf/MobileHomeData?readform";

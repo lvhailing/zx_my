@@ -38,7 +38,15 @@ public class JpushReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-
+//        try {
+//            Bundle bundle1 = intent.getExtras();
+//            String extra = bundle1.getString(JPushInterface.EXTRA_EXTRA);
+//            JSONObject extraJson1 = new JSONObject(extra);
+//
+//            Log.i("aaaa", "啊啊 extra--- " + extraJson1);
+//        } catch (Exception e) {
+//            Log.i("aaaa", "我是消息异常");
+//        }
         //如果推送被关闭
         if (!PreferenceUtil.isOpenPush(MyApplication.instance)) {
             Log.i("aaaa", "推送消息被关闭。消息类型： " + intent.getAction());
@@ -49,19 +57,34 @@ public class JpushReceiver extends BroadcastReceiver {
         Bundle bundle = intent.getExtras();
         if (JPushInterface.ACTION_MESSAGE_RECEIVED.equals(intent.getAction())) {
             //处理自定义消息
-            Log.i("aaaa", "我的自定义消息");
-            sendNotification(context, bundle);
-        } else if (JPushInterface.ACTION_NOTIFICATION_OPENED.equals(intent.getAction())) {
-            //用户点击通知栏通知的调用
-            Log.i("aaaa", "我的自定义消息点击");
-
+            Log.i("aaaa", "我是自定义消息");
+            sendNotificationZiDingYi(context, bundle);
         } else if (JPushInterface.ACTION_NOTIFICATION_RECEIVED.equals(intent.getAction())) {
-            //极光发送的普通消息，在通知栏弹出
-            Log.i("aaaa", "我的极光消息");
+            //极光发送的通知
+            Log.i("aaaa", "我是通知");
+        } else if (JPushInterface.ACTION_NOTIFICATION_OPENED.equals(intent.getAction())) {
+            //用户点击通知栏通知
+            Log.i("aaaa", "我是通知的点击");
+            sendNotification(context, bundle);
         }
     }
 
     public void sendNotification(Context context, Bundle bundle) {
+        String extra = bundle.getString(JPushInterface.EXTRA_EXTRA);
+
+        //点击后去详情页面 带着bundle参数去
+        Intent intent = new Intent(context, WebviewActivity.class);
+        try {
+            JSONObject extraJson = new JSONObject(extra);
+            intent.putExtra("mName", extraJson.getString("itemName"));
+            intent.putExtra("mUrlOrHref", extraJson.getString("href"));
+            context.startActivity(intent);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void sendNotificationZiDingYi(Context context, Bundle bundle) {
         //发通知, 并设置点击发广播
         String title = bundle.getString(JPushInterface.EXTRA_TITLE);
         String msg = bundle.getString(JPushInterface.EXTRA_MESSAGE);//自定义内容

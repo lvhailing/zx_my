@@ -220,7 +220,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rl_6"
                 android:layout_centerHorizontal="true"
-                android:text="强哥coffee time"
+                android:text="强哥 coffee time"
                 android:textColor="@color/zfb_gray_bg_color"
                 android:textSize="10sp"/>
         </RelativeLayout>
