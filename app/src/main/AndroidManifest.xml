@@ -200,7 +200,7 @@
             android:value="developer-default"/>
         <meta-data
             android:name="JPUSH_APPKEY"
-            android:value="f7ac8c21bd597384c70700d9"/>
+            android:value="41f7543c5ea4b8ab8f300343"/>
 
         <!--   ******************************************jipush******************************************   -->
     </application>

@@ -24,7 +24,7 @@ android {
         zx_debug {
             manifestPlaceholders = [label      : "@string/app_name_debug",
                                     icon       : "@mipmap/repair_logo",
-                                    jpush_key  : "f7ac8c21bd597384c70700d9"]
+                                    jpush_key  : "41f7543c5ea4b8ab8f300343"]
 
             // 如果java中需要buildTypes类型，则：context.getResources().getString(R.string.strKey);
             resValue("string", "strKey", "debugStrValue")
@@ -33,7 +33,7 @@ android {
         zx_release {
             manifestPlaceholders = [label      : "@string/app_name",
                                     icon       : "@mipmap/repair_logo",
-                                    jpush_key  : "f7ac8c21bd597384c70700d9"]
+                                    jpush_key  : "41f7543c5ea4b8ab8f300343"]
 
             resValue("string", "strKey", "releaseStrValue",)
         }
