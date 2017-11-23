@@ -177,6 +177,10 @@ public class HomeFourFragment extends BaseFragment implements RecycleCallBack, V
     }
 
     public void initHomeData() {
+        if (getActivity() == null || context == null) {
+            //推送到来后，可能系统已经长时间处于后台，防止崩溃
+            return;
+        }
         if (Util.checkLogin()) {
             //只有登录了，才去后台取数据
             showWaitProgress(context);

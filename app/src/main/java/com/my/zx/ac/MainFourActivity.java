@@ -61,6 +61,14 @@ public class MainFourActivity extends FragmentActivity {
         initBroadcast();
     }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+        //刷新数据
+        homeFourFragment.initHomeData();
+    }
+
     private void initSettings() {
         if (!Util.checkLogin()) {
             return;

@@ -81,7 +81,9 @@
             android:theme="@android:style/Theme.NoTitleBar"/>
         <activity
             android:name=".ac.MainFourActivity"
+            android:exported="true"
             android:label="@string/title_activity_new_main"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar"/>
         <activity
@@ -188,8 +190,11 @@
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.REGISTRATION"/> <!--Required  用户注册SDK的intent-->
                 <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/> <!--Required  用户接收SDK消息的intent-->
-                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/> <!--Required  用户接收SDK通知栏信息的intent-->
-                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/> <!--Required  用户打开自定义通知栏的intent-->
+
+                <!--不加这两句，用户点击通知，极光会默认调到首页（和点击桌面图标一样）。加上有些手机点击消息没反应-->
+                <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>--> <!--Required  用户接收SDK通知栏信息的intent-->
+                <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>--> <!--Required  用户打开自定义通知栏的intent-->
+
                 <category android:name="com.my.zx"></category>
             </intent-filter>
         </receiver>

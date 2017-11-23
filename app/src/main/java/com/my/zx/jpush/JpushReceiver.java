@@ -15,6 +15,7 @@ import android.util.Log;
 
 import com.my.zx.MyApplication;
 import com.my.zx.R;
+import com.my.zx.ac.MainFourActivity;
 import com.my.zx.ac.WebviewActivity;
 import com.my.zx.utils.PreferenceUtil;
 
@@ -58,10 +59,10 @@ public class JpushReceiver extends BroadcastReceiver {
         if (JPushInterface.ACTION_MESSAGE_RECEIVED.equals(intent.getAction())) {
             //处理自定义消息
             Log.i("aaaa", "我是自定义消息");
-            sendNotificationZiDingYi(context, bundle);
+            sendMsgZiDingYi(context, bundle);
         } else if (JPushInterface.ACTION_NOTIFICATION_RECEIVED.equals(intent.getAction())) {
             //极光发送的通知
-            Log.i("aaaa", "我是通知");
+            Log.i("aaaa", "我是通知的到来");
         } else if (JPushInterface.ACTION_NOTIFICATION_OPENED.equals(intent.getAction())) {
             //用户点击通知栏通知
             Log.i("aaaa", "我是通知的点击");
@@ -73,44 +74,57 @@ public class JpushReceiver extends BroadcastReceiver {
         String extra = bundle.getString(JPushInterface.EXTRA_EXTRA);
 
         //点击后去详情页面 带着bundle参数去
-        Intent intent = new Intent(context, WebviewActivity.class);
         try {
+            Intent intent;
             JSONObject extraJson = new JSONObject(extra);
-            intent.putExtra("mName", extraJson.getString("itemName"));
-            intent.putExtra("mUrlOrHref", extraJson.getString("href"));
+            String mUrlOrHref = extraJson.getString("href");
+            if (TextUtils.isEmpty(mUrlOrHref)) {
+                //去首页
+                intent = new Intent(context, MainFourActivity.class);
+            } else {
+                //去h5页
+                intent = new Intent(context, WebviewActivity.class);
+                intent.putExtra("mName", extraJson.getString("itemName"));
+                intent.putExtra("mUrlOrHref", mUrlOrHref);
+            }
             context.startActivity(intent);
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
 
-    public void sendNotificationZiDingYi(Context context, Bundle bundle) {
+    public void sendMsgZiDingYi(Context context, Bundle bundle) {
         //发通知, 并设置点击发广播
         String title = bundle.getString(JPushInterface.EXTRA_TITLE);
         String msg = bundle.getString(JPushInterface.EXTRA_MESSAGE);//自定义内容
         String extra = bundle.getString(JPushInterface.EXTRA_EXTRA);
 
         //弹出通知
-        m_NotificationManager = (NotificationManager) context.getSystemService(context.NOTIFICATION_SERVICE);
+        NotificationManager m_NotificationManager = (NotificationManager) context.getSystemService(context.NOTIFICATION_SERVICE);
         Notification.Builder builder = new Notification.Builder(context);
         builder.setSmallIcon(R.drawable.launcher_icon); //设置图标
         builder.setTicker(TextUtils.isEmpty(title) ? "中信" : title);
         builder.setContentTitle(TextUtils.isEmpty(title) ? "中信消息" : title); //设置标题
-        builder.setContentText(TextUtils.isEmpty(msg) ? "消息内容为空" : msg); //消息内容
+        builder.setContentText(TextUtils.isEmpty(msg) ? "无消息内容" : msg); //消息内容
         builder.setWhen(System.currentTimeMillis()); //发送时间
         builder.setDefaults(Notification.DEFAULT_ALL); //设置默认的提示音，振动方式，灯光
         builder.setAutoCancel(true);//打开程序后图标消失
 //        m_Intent = new Intent(JPushInterface.ACTION_NOTIFICATION_OPENED);
 
-        //点击后去详情页面 带着bundle参数去
-        Intent intent = new Intent(context, WebviewActivity.class);
+        Intent intent = null;
         try {
+            //点击后，如果href为空，则直接去首页，不为空，就去h5页
             JSONObject extraJson = new JSONObject(extra);
-            intent.putExtra("mName", extraJson.getString("itemName"));
-            intent.putExtra("mUrlOrHref", extraJson.getString("href"));
-
-            Log.i("aaaa", "extra--- " + extra);
-            Log.i("aaaa", "maiVisitId--- " + extraJson.getString("maiVisitId"));
+            String mUrlOrHref = extraJson.getString("href");
+            if (TextUtils.isEmpty(mUrlOrHref)) {
+                //去首页
+                intent = new Intent(context, MainFourActivity.class);
+            } else {
+                //去h5页
+                intent = new Intent(context, WebviewActivity.class);
+                intent.putExtra("mName", extraJson.getString("itemName"));
+                intent.putExtra("mUrlOrHref", mUrlOrHref);
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
