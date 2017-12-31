@@ -19,9 +19,9 @@ public class Constant {
     public static final int COFFE = 22000;        //Coffe Time
     public static final int ZHINENG = 23000;        //职能部门动态
     public static final int TUPIAN_NEWS = 24000;        //图片新闻
-    public static final int DANGWEI_JIYAO = 25100;        //党委会纪要
-    public static final int BANGONG_JIYAO = 25000;        //办公会纪要
-    public static final int ZHUANTI_JIYAO = 26000;        //专题会纪要
+    public static final int DANGWEI_JIYAO = 25100;        //党委会议纪要
+    public static final int BANGONG_JIYAO = 25000;        //办公会议纪要
+    public static final int ZHUANTI_JIYAO = 26000;        //专题会议纪要
     public static final int GONGZUO_JIANBAO = 27000;        //工作简报
     public static final int DANGJIAN_GONGZUO = 28000;        //党建工作
     public static final int JIJIAN_JIANCHA = 29000;        //纪检监察

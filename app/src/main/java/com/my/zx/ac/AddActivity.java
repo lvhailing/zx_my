@@ -251,28 +251,28 @@ public class AddActivity extends BaseActivity implements View.OnClickListener {
                     delMe(Constant.COFFE);
                 }
                 break;
-            case R.id.rl_add_dangwei_jiyao:   //党委会纪要
+            case R.id.rl_add_dangwei_jiyao:   //党委会议纪要
                 if (!doDbHasMe(Constant.DANGWEI_JIYAO)) {
                     iv_add_dangwei_jiyao.setBackgroundResource(R.drawable.home_jianhao);
-                    dbList.add(new HomeMo(Constant.DANGWEI_JIYAO, "党委会纪要"));
+                    dbList.add(new HomeMo(Constant.DANGWEI_JIYAO, "党委会议纪要"));
                 } else {
                     iv_add_dangwei_jiyao.setBackgroundResource(R.drawable.home_jiahao);
                     delMe(Constant.DANGWEI_JIYAO);
                 }
                 break;
-            case R.id.rl_add_bangong_jiyao:   //办公会纪要
+            case R.id.rl_add_bangong_jiyao:   //办公会议纪要
                 if (!doDbHasMe(Constant.BANGONG_JIYAO)) {
                     iv_add_bangong_jiyao.setBackgroundResource(R.drawable.home_jianhao);
-                    dbList.add(new HomeMo(Constant.BANGONG_JIYAO, "办公会纪要"));
+                    dbList.add(new HomeMo(Constant.BANGONG_JIYAO, "办公会议纪要"));
                 } else {
                     iv_add_bangong_jiyao.setBackgroundResource(R.drawable.home_jiahao);
                     delMe(Constant.BANGONG_JIYAO);
                 }
                 break;
-            case R.id.rl_add_zhuanti_jiyao:   //专题会纪要
+            case R.id.rl_add_zhuanti_jiyao:   //专题会议纪要
                 if (!doDbHasMe(Constant.ZHUANTI_JIYAO)) {
                     iv_add_zhuanti_jiyao.setBackgroundResource(R.drawable.home_jianhao);
-                    dbList.add(new HomeMo(Constant.ZHUANTI_JIYAO, "专题会纪要"));
+                    dbList.add(new HomeMo(Constant.ZHUANTI_JIYAO, "专题会议纪要"));
                 } else {
                     iv_add_zhuanti_jiyao.setBackgroundResource(R.drawable.home_jiahao);
                     delMe(Constant.ZHUANTI_JIYAO);

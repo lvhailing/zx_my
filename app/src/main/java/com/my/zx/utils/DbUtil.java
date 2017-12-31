@@ -64,9 +64,9 @@ public class DbUtil {
         mList.add(new HomeMo(21000, "强哥心语"));
         mList.add(new HomeMo(22000, "强哥 coffee time"));
 
-        mList.add(new HomeMo(Constant.DANGWEI_JIYAO, "党委会纪要"));
-        mList.add(new HomeMo(Constant.BANGONG_JIYAO, "办公会纪要"));
-        mList.add(new HomeMo(Constant.ZHUANTI_JIYAO, "专题会纪要"));
+        mList.add(new HomeMo(Constant.DANGWEI_JIYAO, "党委会议纪要"));
+        mList.add(new HomeMo(Constant.BANGONG_JIYAO, "办公会议纪要"));
+        mList.add(new HomeMo(Constant.ZHUANTI_JIYAO, "专题会议纪要"));
         mList.add(new HomeMo(Constant.GONGZUO_JIANBAO, "工作简报"));
 
         mList.add(new HomeMo(12000, "我的待办"));

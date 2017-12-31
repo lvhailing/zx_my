@@ -200,13 +200,13 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener {
             case R.id.rl_qiang_coffee:   //强哥 coffee time
                 goToActivity(Constant.COFFE);
                 break;
-            case R.id.rl_dangwei_jiyao:   //党委会纪要
+            case R.id.rl_dangwei_jiyao:   //党委会议纪要
                 goToActivity(Constant.DANGWEI_JIYAO);
                 break;
-            case R.id.rl_bangong_jiyao:   //办公会纪要
+            case R.id.rl_bangong_jiyao:   //办公会议纪要
                 goToActivity(Constant.BANGONG_JIYAO);
                 break;
-            case R.id.rl_zhuanti_jiyao:   //专题会纪要
+            case R.id.rl_zhuanti_jiyao:   //专题会议纪要
                 goToActivity(Constant.ZHUANTI_JIYAO);
                 break;
             case R.id.rl_gongzuo_jianbao:   //工作简报

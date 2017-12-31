@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rl_1"
                 android:layout_centerHorizontal="true"
-                android:text="党委会纪要"
+                android:text="党委会议纪要"
                 android:textColor="@color/txt_gray_dark"
                 android:textSize="12sp"/>
         </RelativeLayout>
@@ -112,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rl_2"
                 android:layout_centerHorizontal="true"
-                android:text="办公会纪要"
+                android:text="办公会议纪要"
                 android:textColor="@color/txt_gray_dark"
                 android:textSize="12sp"/>
         </RelativeLayout>
@@ -159,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rl_3"
                 android:layout_centerHorizontal="true"
-                android:text="专题会纪要"
+                android:text="专题会议纪要"
                 android:textColor="@color/txt_gray_dark"
                 android:textSize="12sp"/>
         </RelativeLayout>

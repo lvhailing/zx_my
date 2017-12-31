@@ -159,13 +159,13 @@ public class ImageLoadUtil {
             case Constant.TUPIAN_NEWS: // 图片新闻
                 rId = R.drawable.home_tupian_news_normal;
                 break;
-            case Constant.DANGWEI_JIYAO: // 党委会纪要
+            case Constant.DANGWEI_JIYAO: // 党委会议纪要
                 rId = R.drawable.home_dangwei_jiyao;
                 break;
-            case Constant.BANGONG_JIYAO: // 办公会纪要
+            case Constant.BANGONG_JIYAO: // 办公会议纪要
                 rId = R.drawable.home_bangong_jiyao;
                 break;
-            case Constant.ZHUANTI_JIYAO: // 专题会纪要
+            case Constant.ZHUANTI_JIYAO: // 专题会议纪要
                 rId = R.drawable.home_zhuanti_jiyao;
                 break;
             case Constant.GONGZUO_JIANBAO: // 工作简报
