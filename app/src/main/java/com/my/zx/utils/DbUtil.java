@@ -35,8 +35,10 @@ public class DbUtil {
 //        mList.add(new HomeMo(16000, "公司领导动态", false, 0, 0, "/produce/mobilemng.nsf/agtGetViewData?open&&odbpath=application/infopublish.nsf&oviewname=vwinfoforshow&page=1&rows=15&oviewcategory=gslddt&type=info"));
 //        mList.add(new HomeMo(15000, "资产公司动态", false, 0, 0, "/produce/mobilemng.nsf/agtGetViewData?open&&odbpath=application/infopublish.nsf&oviewname=vwinfoforshow&page=1&rows=15&oviewcategory=zcgsdt&type=info"));
 //        mList.add(new HomeMo(20000, "分公司动态", false, 0, 0, "/produce/mobilemng.nsf/agtGetViewData?open&&odbpath=application/infopublish.nsf&oviewname=vwinfoforshow&page=1&rows=15&oviewcategory=fgsdt&type=info"));
-        mList.add(new HomeMo(21000, "强哥心语"));
-        mList.add(new HomeMo(22000, "强哥 coffee time"));
+
+        //2018/4/3 修改 去掉强哥心语和强哥 coffee time
+//        mList.add(new HomeMo(21000, "强哥心语"));
+//        mList.add(new HomeMo(22000, "强哥 coffee time"));
         mList.add(new HomeMo(28000, "党建工作"));
         mList.add(new HomeMo(16000, "领导动态"));
 //        mList.add(new HomeMo(14000, "通知公告"));
@@ -61,8 +63,9 @@ public class DbUtil {
     public static List<HomeMo> initializeAddActivityItems() {
         List<HomeMo> mList = new ArrayList<>();
 
-        mList.add(new HomeMo(21000, "强哥心语"));
-        mList.add(new HomeMo(22000, "强哥 coffee time"));
+        //2018/4/3 修改 去掉强哥心语和强哥 coffee time
+//        mList.add(new HomeMo(21000, "强哥心语"));
+//        mList.add(new HomeMo(22000, "强哥 coffee time"));
 
         mList.add(new HomeMo(Constant.DANGWEI_JIYAO, "党委会议纪要"));
         mList.add(new HomeMo(Constant.BANGONG_JIYAO, "办公会议纪要"));

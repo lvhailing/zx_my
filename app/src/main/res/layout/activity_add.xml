@@ -56,10 +56,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <!--强哥系列-->
-            <include
+            <!--<include
                 layout="@layout/layout_edit_qiang"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"/>-->
 
             <!--纪要简报-->
             <include

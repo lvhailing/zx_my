@@ -69,8 +69,9 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private void initView() {
-        RelativeLayout rl_qiang_xinyu = (RelativeLayout) findViewById(R.id.rl_qiang_xinyu);
-        RelativeLayout rl_qiang_coffee = (RelativeLayout) findViewById(R.id.rl_qiang_coffee);
+        //2018/4/3 修改 去掉强哥心语和强哥 coffee time
+//        RelativeLayout rl_qiang_xinyu = (RelativeLayout) findViewById(R.id.rl_qiang_xinyu);
+//        RelativeLayout rl_qiang_coffee = (RelativeLayout) findViewById(R.id.rl_qiang_coffee);
         RelativeLayout rl_dangwei_jiyao = (RelativeLayout) findViewById(R.id.rl_dangwei_jiyao);
         RelativeLayout rl_bangong_jiyao = (RelativeLayout) findViewById(R.id.rl_bangong_jiyao);
         RelativeLayout rl_zhuanti_jiyao = (RelativeLayout) findViewById(R.id.rl_zhuanti_jiyao);
@@ -98,8 +99,9 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener {
         RelativeLayout rl_tongzhi_gonggao = (RelativeLayout) findViewById(R.id.rl_tongzhi_gonggao);
         RelativeLayout rl_lingdao_dongtai = (RelativeLayout) findViewById(R.id.rl_lingdao_dongtai);
 
-        RelativeLayout rl_add_qiang_coffee = (RelativeLayout) findViewById(R.id.rl_add_qiang_coffee);
-        RelativeLayout rl_add_qiang_xinyu = (RelativeLayout) findViewById(R.id.rl_add_qiang_xinyu);
+        //2018/4/3 修改 去掉强哥心语和强哥 coffee time
+//        RelativeLayout rl_add_qiang_coffee = (RelativeLayout) findViewById(R.id.rl_add_qiang_coffee);
+//        RelativeLayout rl_add_qiang_xinyu = (RelativeLayout) findViewById(R.id.rl_add_qiang_xinyu);
         RelativeLayout rl_add_dangwei_jiyao = (RelativeLayout) findViewById(R.id.rl_add_dangwei_jiyao);
         RelativeLayout rl_add_bangong_jiyao = (RelativeLayout) findViewById(R.id.rl_add_bangong_jiyao);
         RelativeLayout rl_add_zhuanti_jiyao = (RelativeLayout) findViewById(R.id.rl_add_zhuanti_jiyao);
@@ -128,8 +130,9 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener {
         RelativeLayout rl_add_lingdao_dongtai = (RelativeLayout) findViewById(R.id.rl_add_lingdao_dongtai);
         ImageView iv_back=(ImageView) findViewById(R.id.iv_back);
 
-        rl_add_qiang_coffee.setVisibility(View.GONE);
-        rl_add_qiang_xinyu.setVisibility(View.GONE);
+        //2018/4/3 修改 去掉强哥心语和强哥 coffee time
+//        rl_add_qiang_coffee.setVisibility(View.GONE);
+//        rl_add_qiang_xinyu.setVisibility(View.GONE);
         rl_add_dangwei_jiyao.setVisibility(View.GONE);
         rl_add_bangong_jiyao.setVisibility(View.GONE);
         rl_add_zhuanti_jiyao.setVisibility(View.GONE);
@@ -157,8 +160,9 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener {
         rl_add_tongzhi_gonggao.setVisibility(View.GONE);
         rl_add_lingdao_dongtai.setVisibility(View.GONE);
 
-        rl_qiang_xinyu.setOnClickListener(this);
-        rl_qiang_coffee.setOnClickListener(this);
+        //2018/4/3 修改 去掉强哥心语和强哥 coffee time
+//        rl_qiang_xinyu.setOnClickListener(this);
+//        rl_qiang_coffee.setOnClickListener(this);
         rl_dangwei_jiyao.setOnClickListener(this);
         rl_bangong_jiyao.setOnClickListener(this);
         rl_zhuanti_jiyao.setOnClickListener(this);
@@ -194,12 +198,13 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener {
             case R.id.iv_back:   //返回
                 finish();
                 break;
-            case R.id.rl_qiang_xinyu:   //强哥心语
-                goToActivity(Constant.QIANG);
-                break;
-            case R.id.rl_qiang_coffee:   //强哥 coffee time
-                goToActivity(Constant.COFFE);
-                break;
+            //2018/4/3 修改 去掉强哥心语和强哥 coffee time
+//            case R.id.rl_qiang_xinyu:   //强哥心语
+//                goToActivity(Constant.QIANG);
+//                break;
+//            case R.id.rl_qiang_coffee:   //强哥 coffee time
+//                goToActivity(Constant.COFFE);
+//                break;
             case R.id.rl_dangwei_jiyao:   //党委会议纪要
                 goToActivity(Constant.DANGWEI_JIYAO);
                 break;
